@@ -1,0 +1,2 @@
+import type { Config } from 'tailwindcss';
+export default { darkMode: 'class', content: ['./index.html','./src/**/*.{ts,tsx}'], theme: { extend: { fontFamily: { sans: ['Inter','ui-sans-serif','system-ui'] }, colors: { primary:'#10b981', secondary:'#6366f1', accent:'#f59e0b', danger:'#ef4444', ink:'#0f172a' }, boxShadow: { glow:'0 24px 80px rgba(16,185,129,.25)' }, animation: { float:'float 6s ease-in-out infinite' }, keyframes:{ float:{'0%,100%':{transform:'translateY(0)'},'50%':{transform:'translateY(-10px)'}} } } }, plugins: [] } satisfies Config;

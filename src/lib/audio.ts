@@ -1,0 +1,2 @@
+export function canSpeak(){ return typeof window !== 'undefined' && 'speechSynthesis' in window; }
+export function speak(word:string,audioUrl?:string){ if(audioUrl){ new Audio(audioUrl).play().catch(()=>undefined); return; } if(!canSpeak()) return; const utterance=new SpeechSynthesisUtterance(word); utterance.lang='en-US'; utterance.rate=.9; window.speechSynthesis.cancel(); window.speechSynthesis.speak(utterance); }

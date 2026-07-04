@@ -1,0 +1,3 @@
+import { useQuery } from '@tanstack/react-query';
+import { api } from '../lib/api';
+export function useAuth(){ return useQuery({queryKey:['useAuth'], queryFn: api.getDashboard}); }

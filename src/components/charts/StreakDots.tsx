@@ -1,0 +1,1 @@
+export function StreakDots({days}:{days:number}){return <div className="flex gap-1">{Array.from({length:7},(_,i)=><span key={i} className={`h-3 w-3 rounded-full ${i<days?'bg-amber-400':'bg-slate-200 dark:bg-slate-700'}`} title={`${i+1}`}/>)}</div>}
