@@ -1,0 +1,1 @@
+export function HeatmapCalendar(){return <div className="grid grid-cols-14 gap-1">{Array.from({length:98},(_,i)=><div key={i} className={`h-3 rounded-sm ${['bg-slate-200','bg-emerald-200','bg-emerald-400','bg-emerald-600'][i%4]} dark:opacity-80`} title={`${i%12} từ`}/>)}</div>}

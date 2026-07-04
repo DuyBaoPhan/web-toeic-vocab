@@ -1,0 +1,2 @@
+import { describe, expect, it } from 'vitest'; import { Rating } from 'ts-fsrs'; import { userWords } from '../data/mock'; import { scheduleReview, uiToRating } from './fsrs';
+describe('fsrs wrapper',()=>{ it('maps UI ratings',()=>{ expect(uiToRating('again')).toBe(Rating.Again); expect(uiToRating('easy')).toBe(Rating.Easy); }); it('schedules review card',()=>{ const next=scheduleReview(userWords[0],Rating.Good); expect(next.reps).toBeGreaterThanOrEqual(userWords[0].reps); expect(next.due).toBeInstanceOf(Date); }); });
